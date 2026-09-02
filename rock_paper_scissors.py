@@ -6,13 +6,17 @@ def Rock_Paper_Scissors(player_choice,computer_choice):
     
      # 判断胜负
     if player_choice == computer_choice:
-        print("平局")
+        #print("平局")
+        return "平局"
     elif (player_choice == "石头" and computer_choice == "剪刀") or  \
          (player_choice == "剪刀" and computer_choice == "布") or \
          (player_choice == "布" and computer_choice == "石头"):
-        print("这局你赢了！")
+        #print("这局你赢了！")
+        return "这局你赢了！"
     else:    
-        print("你输了！")
+        #print("你输了！")
+        return "你输了！"
+        
 def main():  # 定义函数用 "def"
     choices = ["石头","剪刀","布"]  # 数组
     showhand = {"石头":"石头","剪刀":"剪刀","布":"布","r":"石头","s":"剪刀","p":"布"}   #用字典来映射简写
@@ -30,8 +34,8 @@ def main():  # 定义函数用 "def"
         computer_choice = random.choice(choices)
         
         # 调用函数传参判断胜负
-        Rock_Paper_Scissors(player_choice,computer_choice)
-        
+        result = Rock_Paper_Scissors(player_choice,computer_choice)
+        print(result)
         # 询问是否再来一次
         while True:
             again = input("再来一局? y/n:").strip().lower()
