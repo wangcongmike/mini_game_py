@@ -29,10 +29,21 @@ def Rock_Paper_Scissors():  # 定义函数用 "def"
             print("你输了！")
         
         # 询问是否再来一次
-        again = input("再来一局?y/n:").strip().lower()
-        if again != "y":
-            print("再见,欢迎下次再来！")
-            break
+        #again = input("再来一局?y/n:").strip().lower()
+        #if again != "y":     # 这里会有BUG，选除 y之外的字母一样会中断跳出整个程序；
+          #  print("再见,欢迎下次再来！")
+           # break
+        while True:
+            again = input("再来一局? y/n:").strip().lower()
+            if again == "y":
+                break
+            elif again == "n":
+                print("下次再来哈~")
+                #exit()   # exit() 是跳出整个代码，直接杀死进程，太暴力，尽量少用；
+                #break    # break  是跳出循环，但函数里出来循环外的代码还会执行
+                return    # return 是跳出函数，结束代码最优雅，也是最温和！
+            else:
+                print("输入错误，请输入 y/n: ")
         
 # 运行游戏
 if __name__ == "__main__":  
