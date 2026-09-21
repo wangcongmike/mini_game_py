@@ -3,12 +3,13 @@
 <p>这是一个包含两个经典小游戏的 <span style="color: #4ecdc4;">Python</span> 项目：</p>
 
 <ul>
-  <li><span style="color: #ff6b6b;">🔴 石头剪刀布</span> (Rock-Paper-Scissors.py)</li>
-  <li><span style="color: #ffd93d;">🟡 猜数字</span> (guess_The_Number.PY)</li>
+  <li><span style="color: #ff6b6b;">🔴 石头剪刀布</span> (rps_gui.py)</li>
+  <li><span style="color: #ffd93d;">🟡 猜数字</span> (guess_gui.PY)</li>
+  <li><span style="color: #2797fa;">   贪吃蛇</span>(snake_gui.py)</li>
 </ul>
 
 <h2>🚀 如何运行</h2>
 
-<p>确保你安装了 <span style="color: #4ecdc4;">Python 3</span>，然后在终端中运行：</p>
+<p>确保你安装了 <span style="color: #1feadce8;">Python 3</span>，然后在终端中运行：</p>
 
-<pre><code>python Rock-Paper-Scissors.py</code></pre>
+<pre><code>python main.py</code></pre>

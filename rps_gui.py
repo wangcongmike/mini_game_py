@@ -2,12 +2,13 @@ import customtkinter as ctk
 import random
 from rock_paper_scissors import Rock_Paper_Scissors
 
-def open_rps(parent):
+def Open_Rps(parent):
      # 创建主窗口
     window = ctk.CTkToplevel(parent)
     window.title("石头剪刀布")
     window.geometry("400x500")
     window.resizable(False,False) #禁止调窗口大小
+    #window.lift()
     
     #设置延迟
     #window.after(100,lambda:
@@ -16,8 +17,9 @@ def open_rps(parent):
        # window.attributes('-topmost',1)
        # ))
     #window.after(300,lambda:window.attributes('-topmost',0))
+    
     window.after(100,window.lift)
-    window.after(100,window.focus_force)  #推荐这种写法,更温和；
+    window.after(200,window.focus_set)  #推荐这种写法,更温和；
     
     #创建计分板
     wins = 0

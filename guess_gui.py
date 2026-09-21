@@ -1,12 +1,13 @@
 import customtkinter as ctk
 import random
 
-def open_guess(parent):
+def Open_Guess(parent):
     #搭建主框架
     window = ctk.CTkToplevel(parent)
     window.title("猜数字")
     window.geometry("400x300")
     window.lift()
+    window.resizable(False,False)
     
     target = random.randint(1,100)
     attempts = 0    #定义次数
@@ -28,18 +29,14 @@ def open_guess(parent):
         else:
             result_lable.configure(text=f"这是第{attempts}次，恭喜你猜对了!",text_color="green")
             
-    #
     prompt = ctk.CTkLabel(window,text="请猜一个1~100之间的数字!",font=ctk.CTkFont(size=16))
     prompt.pack(pady=10)
     
-    #
     entry = ctk.CTkEntry(window,width=150)
     entry.pack(pady=10)
     
-    #
     btn = ctk.CTkButton(window,text="猜!",command=Check_Guess)
     btn.pack(pady=10)
     
-    #
     result_lable = ctk.CTkLabel(window,text="",font=ctk.CTkFont(size=16))
     result_lable.pack(pady=20)
